@@ -1,11 +1,12 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 210 50% 98%;
+    --foreground: 220 20% 20%;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 210 90% 50%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,24 +36,17 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 220 20% 10%;
     --foreground: 210 40% 98%;
 
     --card: 222.2 84% 4.9%;
@@ -61,8 +55,8 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 80% 50%;
+    --primary-foreground: 210 40% 98%;
 
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
@@ -97,5 +91,27 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .product-card {
+    @apply relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg;
+  }
+  
+  .product-card:hover img {
+    @apply scale-105;
+  }
+  
+  .product-card img {
+    @apply w-full object-cover transition-transform duration-300;
+  }
+  
+  .product-badge {
+    @apply absolute right-2 top-2 rounded-full bg-shop-600 px-2 py-1 text-xs font-medium text-white;
+  }
+
+  .add-to-cart-btn {
+    @apply mt-2 w-full rounded-md bg-shop-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-shop-700 focus:outline-none focus:ring-2 focus:ring-shop-500 focus:ring-offset-2;
   }
 }
