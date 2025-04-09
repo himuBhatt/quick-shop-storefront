@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { ShoppingCart, Menu, X, Search } from "lucide-react";
+import { ShoppingCart, Menu, X, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/hooks/use-cart";
 
@@ -54,6 +54,12 @@ const Navbar = () => {
               </div>
             </div>
             
+            <Link to="/auth" className="relative">
+              <Button variant="ghost" size="icon" title="Sign In">
+                <User className="h-5 w-5" />
+              </Button>
+            </Link>
+            
             <Link to="/cart" className="relative">
               <Button variant="ghost" size="icon">
                 <ShoppingCart className="h-5 w-5" />
@@ -105,6 +111,13 @@ const Navbar = () => {
               onClick={toggleMenu}
             >
               About
+            </Link>
+            <Link
+              to="/auth"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-shop-600"
+              onClick={toggleMenu}
+            >
+              Sign In
             </Link>
             <div className="relative mt-3">
               <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">

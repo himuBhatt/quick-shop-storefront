@@ -17,3 +17,11 @@ export interface Category {
   image: string;
   itemCount: number;
 }
+
+export interface User {
+  id: string;
+  email?: string;
+  name?: string;
+  avatar_url?: string;
+}
+
