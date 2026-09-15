@@ -13,7 +13,7 @@ const Footer = () => {
                 QuickShop
               </Link>
               <p className="mt-2 max-w-md text-sm text-gray-500">
-                Your one-stop shop for all things trendy and essential.
+                Everyday clothing, fresh styles, and wardrobe essentials.
               </p>
             </div>
             <div className="flex flex-wrap gap-x-10 gap-y-4 md:gap-x-12">

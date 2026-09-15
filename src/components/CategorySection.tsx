@@ -19,7 +19,7 @@ const CategorySection = ({ categories }: CategorySectionProps) => {
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shop by Category</h2>
           <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-            Browse our collection of products organized by category.
+            Find your next favorite fit, from everyday tees to outerwear.
           </p>
         </div>
 

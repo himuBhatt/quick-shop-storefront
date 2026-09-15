@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
 import { Search, SlidersHorizontal, X } from "lucide-react";
 import { products } from "@/data/products";
+import { useParams } from "react-router-dom";
+import { getCategoryById } from "@/data/categories";
 import { Product } from "@/types";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 const Products = () => {
+  const { categoryId } = useParams();
+  const activeCategory = categoryId ? getCategoryById(categoryId) : undefined;
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("");
@@ -14,6 +18,8 @@ const Products = () => {
   const [sortBy, setSortBy] = useState<string>("featured");
   const [showFilters, setShowFilters] = useState(false);
   
+  useEffect(() => { setSelectedCategory(activeCategory?.name ?? ""); }, [activeCategory?.name]);
+
   const categories = [...new Set(products.map(product => product.category))];
 
   useEffect(() => {
@@ -91,12 +97,12 @@ const Products = () => {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div className="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-6">
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900">All Products</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900">{activeCategory?.name ?? "All Clothing"}</h1>
         <div className="flex items-center">
           <Button
             variant="outline"
             size="sm"
-            className="flex items-center gap-1.5 md:hidden"
+            className="flex items-center gap-1.5 lg:hidden"
             onClick={toggleFilters}
           >
             <SlidersHorizontal className="h-4 w-4" />
@@ -125,7 +131,7 @@ const Products = () => {
               <input
                 type="search"
                 className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:border-shop-500 focus:outline-none focus:ring-1 focus:ring-shop-500"
-                placeholder="Search products..."
+                placeholder="Search clothing..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />

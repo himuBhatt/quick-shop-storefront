@@ -29,7 +29,7 @@ const Navbar = () => {
                 Home
               </Link>
               <Link to="/products" className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-shop-600">
-                Products
+                Clothing
               </Link>
               <Link to="/categories" className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-shop-600">
                 Categories
@@ -48,7 +48,7 @@ const Navbar = () => {
                 </div>
                 <input
                   className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:border-shop-500 focus:outline-none focus:ring-1 focus:ring-shop-500"
-                  placeholder="Search products..."
+                  placeholder="Search clothing..."
                   type="search"
                 />
               </div>
@@ -96,7 +96,7 @@ const Navbar = () => {
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-shop-600"
               onClick={toggleMenu}
             >
-              Products
+              Clothing
             </Link>
             <Link
               to="/categories"
@@ -125,7 +125,7 @@ const Navbar = () => {
               </div>
               <input
                 className="block w-full rounded-md border border-gray-300 bg-white py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:border-shop-500 focus:outline-none focus:ring-1 focus:ring-shop-500"
-                placeholder="Search products..."
+                placeholder="Search clothing..."
                 type="search"
               />
             </div>
