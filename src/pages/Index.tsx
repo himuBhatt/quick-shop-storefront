@@ -33,10 +33,10 @@ const Index = () => {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 sm:py-8">
             <div className="text-center">
               <h2 className="text-3xl font-bold text-white sm:text-4xl">
-                Ready to get started?
+                Refresh your wardrobe
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-shop-100">
-                Browse our extensive collection of products and find exactly what you need.
+                Discover everyday staples and fresh styles made for your next outfit.
               </p>
               <div className="mt-8 flex justify-center gap-4">
                 <Button asChild size="lg" className="bg-white text-shop-600 hover:bg-shop-50">
@@ -111,7 +111,7 @@ const Index = () => {
                   Subscribe to our newsletter
                 </h2>
                 <p className="mt-4 max-w-3xl text-lg text-gray-500">
-                  Get the latest updates about new products, sales, and special offers delivered straight to your inbox.
+                  Get the latest updates about new clothing arrivals, sales, and special offers delivered straight to your inbox.
                 </p>
               </div>
               <div className="mt-12 lg:mt-0 lg:ml-8 lg:w-full lg:max-w-md">

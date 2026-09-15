@@ -10,8 +10,8 @@ interface FeaturedProductsProps {
 
 const FeaturedProducts = ({ 
   products, 
-  title = "Featured Products", 
-  subtitle = "Check out our most popular items from this season." 
+  title = "Featured Clothing", 
+  subtitle = "Fresh picks for your everyday wardrobe." 
 }: FeaturedProductsProps) => {
   return (
     <section className="py-12 sm:py-16">

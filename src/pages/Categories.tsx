@@ -15,7 +15,7 @@ const Categories = () => {
       <div className="text-center">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shop by Category</h1>
         <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4">
-          Browse our wide range of products organized by category.
+          Explore clothing for every day, from denim and dresses to cozy layers.
         </p>
       </div>
 

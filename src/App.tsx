@@ -69,6 +69,7 @@ const App = () => (
                     </>
                   } 
                 />
+                <Route path="/categories/:categoryId" element={<><Navbar /><Products /><Footer /></>} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

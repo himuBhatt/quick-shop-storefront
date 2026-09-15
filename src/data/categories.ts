@@ -1,45 +1,37 @@
-
 import { Category } from "@/types";
+import { products } from "./products";
 
 export const categories: Category[] = [
   {
-    id: "electronics",
-    name: "Electronics",
-    image: "https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    itemCount: 24
+    "id": "t-shirts",
+    "name": "T-Shirts",
+    "image": "/images/tee.jpg"
   },
   {
-    id: "clothing",
-    name: "Clothing & Fashion",
-    image: "https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    itemCount: 36
+    "id": "denim",
+    "name": "Denim",
+    "image": "/images/jeans.jpg"
   },
   {
-    id: "home",
-    name: "Home & Kitchen",
-    image: "https://images.unsplash.com/photo-1607522370275-f14206abe5d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    itemCount: 42
+    "id": "dresses",
+    "name": "Dresses",
+    "image": "/images/dress.jpg"
   },
   {
-    id: "furniture",
-    name: "Furniture",
-    image: "https://images.unsplash.com/photo-1538688423619-a81d3f23454b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    itemCount: 18
+    "id": "shirts",
+    "name": "Shirts",
+    "image": "/images/shirt.jpg"
   },
   {
-    id: "accessories",
-    name: "Accessories",
-    image: "https://images.unsplash.com/photo-1523575708161-ad0fc2a9b951?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    itemCount: 29
+    "id": "knitwear",
+    "name": "Knitwear & Hoodies",
+    "image": "/images/knit.jpg"
   },
   {
-    id: "beauty",
-    name: "Beauty & Personal Care",
-    image: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    itemCount: 31
+    "id": "outerwear",
+    "name": "Outerwear",
+    "image": "/images/jacket.jpg"
   }
-];
+].map(category => ({ ...category, itemCount: products.filter(product => product.category === category.name).length }));
 
-export const getCategoryById = (id: string): Category | undefined => {
-  return categories.find(category => category.id === id);
-};
+export const getCategoryById = (id: string): Category | undefined => categories.find(category => category.id === id);
